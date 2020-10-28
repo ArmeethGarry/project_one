@@ -29,7 +29,7 @@ let numberOfFilms = +prompt('Сколько фильмов вы уже посм�
      count: numberOfFilms,
      movies: {},
      actors: {},
-     genres: {},
+     genres: [],
      privat: false
  };
 
