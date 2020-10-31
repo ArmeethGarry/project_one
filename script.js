@@ -24,11 +24,11 @@ let numberOfFilms = +prompt('Сколько фильмов вы уже посм�
      privat: false
  };
 
-for(let i = 0; i < numberOfFilms; ) {
+for(let i = 0; i < 2; ) {
     let movie = prompt('Один из последних просмотренных фильмов?', '');
     let assess = prompt('На сколько оцените его?', '5');
 
-    if( movie == undefined || movie == '' || movie.length > 50 ) continue;
+    if( movie == undefined || assess == undefined || movie == '' || movie.length > 50 ) continue;
 
     personalMovieDB.movies[movie] = assess;
     i++;
