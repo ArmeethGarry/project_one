@@ -48,18 +48,18 @@ start();
 rememberMyFilms();
 
 function detectPersonalLevel() {
-    if ( personalMovieDB.count == 0) {
-        alert( 'Произошла ошибка' );
-    
-    } else if ( personalMovieDB.count > 0 && personalMovieDB.count < 10 ) {
-        alert( 'Просмотрено довольно мало фильмов' );
+    if ( personalMovieDB.count < 10 ) {
+        console.log( 'Просмотрено довольно мало фильмов' );
     
     } else if ( personalMovieDB.count >= 10 && personalMovieDB.count <= 30 ) {
-        alert( 'Вы классический зритель' );
+        console.log( 'Вы классический зритель' );
     
     } else if ( personalMovieDB.count > 30 ) {
-        alert( 'Вы киноман' );
+        console.log( 'Вы киноман' );
     
+    } else {
+        console.log( 'Произошла ошибка!' );
+
     }
 }
 
