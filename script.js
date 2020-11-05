@@ -65,4 +65,15 @@ function detectPersonalLevel() {
 
 detectPersonalLevel();
 
-console.log(personalMovieDB.movies);
+function showMyDB() {
+    if( personalMovieDB.privat === false ) {
+        return console.log();
+    }
+}
+
+function writeYourGenres() {
+    for( let i = 1; i < 4; i++ ) {
+        let genresTop = prompt(`Ваш любимый жанр под номером ${i}`);
+        personalMovieDB.genres = genresTop;
+    }
+}
