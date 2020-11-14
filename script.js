@@ -63,8 +63,8 @@ let personalMovieDB = {
             }            
         }
 
-        return ( personalMovieDB.genres.forEach( function( elem, i ) {
+        personalMovieDB.genres.forEach( ( elem, i ) => {
             console.log( `Любимый жанр #${i + 1} - это ${elem}` );
-        } ) );
+        });
     }
 };
