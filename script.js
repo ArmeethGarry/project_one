@@ -14,18 +14,16 @@
 
 'use strict';
 
-let numberOfFilms;
-
 let personalMovieDB = {
-    count: numberOfFilms,
+    count: 0,
     movies: {},
     actors: {},
     genres: [],
     privat: false,
     start: function() {
-        numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+        personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', '');
     
-        while( numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms) ) {
+        while( personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count) ) {
             numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
         }
     },
