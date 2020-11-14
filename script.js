@@ -43,16 +43,28 @@ let personalMovieDB = {
             return console.log( personalMovieDB );
         }
     },
-    writeYourGenres: function() {
-        for( let i = 1; i < 4; i++ ) {
-            personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
-        }
-    },
     toggleVisibleMyDB: function() {
         if( personalMovieDB.privat ) {
             personalMovieDB.privat = false;
         } else {
             personalMovieDB.privat = true;
         }
+    },
+    writeYourGenres: function() {
+        for( let i = 1; i < 4; ) {
+            let genre = prompt(`Ваш любимый жанр под номером ${i}`);
+
+            if( genre === '' || genre == null ) {
+                console.log( 'Вы ввели не коррктные данные. Попробуйте еще раз.' );
+                continue;
+            } else {
+                personalMovieDB.genres[i - 1] = genre;
+                i++
+            }            
+        }
+
+        return ( personalMovieDB.genres.forEach( function( elem, i ) {
+            console.log( `Любимый жанр #${i + 1} - это ${elem}` );
+        } ) );
     }
 };
